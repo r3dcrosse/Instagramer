@@ -41,22 +41,32 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onSignUp(sender: AnyObject) {
-        let newUser = PFUser()
         
-        newUser.username = usernameField.text
-        newUser.password = passwordField.text
+        let username = usernameField.text ?? ""
+        let password = passwordField.text ?? ""
         
-        newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if success {
-                print("Yay created a user")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
-            } else {
-                print(error?.localizedDescription)
-                if error?.code == 202 {
-                    print("Username is taken")
+        if username != "" && password != "" {
+            // sign up user
+            let newUser = PFUser()
+            
+            newUser.username = username
+            newUser.password = password
+            
+            newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if success {
+                    print("Yay created a user")
+                    self.performSegueWithIdentifier("loginSegue", sender: nil)
+                } else {
+                    print(error?.localizedDescription)
+                    if error?.code == 202 {
+                        print("Username is taken")
+                    }
                 }
             }
+        } else {
+            print("Please enter a username and password to sign up")
         }
+        
     }
     /*
     // MARK: - Navigation

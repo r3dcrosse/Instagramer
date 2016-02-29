@@ -26,10 +26,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
+        let username = usernameField.text ?? ""
+        let password = passwordField.text ?? ""
+        
+        
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("You're logged in")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
+            } else {
+                print("Username is required")
             }
         }
     }

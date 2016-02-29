@@ -12,6 +12,7 @@
 		81387ED41C84C9F9006E6A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81387ED21C84C9F9006E6A4E /* Main.storyboard */; };
 		81387ED61C84C9F9006E6A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81387ED51C84C9F9006E6A4E /* Assets.xcassets */; };
 		81387ED91C84C9F9006E6A4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81387ED71C84C9F9006E6A4E /* LaunchScreen.storyboard */; };
+		81387EE21C84D104006E6A4E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387EE11C84D104006E6A4E /* LoginViewController.swift */; };
 		FB90170B8560FDDA7CE2F7A8 /* Pods_Instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0283EF922886C982B2554A93 /* Pods_Instagramer.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		81387ED51C84C9F9006E6A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81387ED81C84C9F9006E6A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81387EDA1C84C9F9006E6A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81387EE11C84D104006E6A4E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5F91F3B9B8759E512192930 /* Pods-Instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagramer/Pods-Instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 		81387ECD1C84C9F9006E6A4E /* Instagramer */ = {
 			isa = PBXGroup;
 			children = (
+				81387EE01C84D0F3006E6A4E /* View Controllers */,
 				81387ECE1C84C9F9006E6A4E /* AppDelegate.swift */,
 				81387ED01C84C9F9006E6A4E /* ViewController.swift */,
 				81387ED21C84C9F9006E6A4E /* Main.storyboard */,
@@ -69,6 +72,14 @@
 				81387EDA1C84C9F9006E6A4E /* Info.plist */,
 			);
 			path = Instagramer;
+			sourceTree = "<group>";
+		};
+		81387EE01C84D0F3006E6A4E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81387EE11C84D104006E6A4E /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		8B88BC0196D7503F28201986 /* Frameworks */ = {
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81387EE21C84D104006E6A4E /* LoginViewController.swift in Sources */,
 				81387ED11C84C9F9006E6A4E /* ViewController.swift in Sources */,
 				81387ECF1C84C9F9006E6A4E /* AppDelegate.swift in Sources */,
 			);

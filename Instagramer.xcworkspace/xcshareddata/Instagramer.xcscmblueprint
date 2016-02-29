@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0D4213470788482EFA4F34376DD4BE3431D4A23B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0D4213470788482EFA4F34376DD4BE3431D4A23B" : 0,
+    "CED20F73FDAF566013D83E22583693C6F0E9761C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1AF45D70-4C8D-477E-9A3B-D5ABEA6DD753",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0D4213470788482EFA4F34376DD4BE3431D4A23B" : "Instagramer\/",
+    "CED20F73FDAF566013D83E22583693C6F0E9761C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Instagramer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Instagramer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/r3dcrosse\/Instagramer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D4213470788482EFA4F34376DD4BE3431D4A23B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/r3dcrosse\/Instagramer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CED20F73FDAF566013D83E22583693C6F0E9761C"
+    }
+  ]
+}

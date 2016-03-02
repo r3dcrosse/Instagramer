@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dismiss(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBAction func onSignIn(sender: AnyObject) {
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""

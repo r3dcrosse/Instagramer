@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813193091C8693D8001A200F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813193081C8693D8001A200F /* UserProfileViewController.swift */; };
 		81387ECF1C84C9F9006E6A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387ECE1C84C9F9006E6A4E /* AppDelegate.swift */; };
 		81387ED11C84C9F9006E6A4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387ED01C84C9F9006E6A4E /* ViewController.swift */; };
 		81387ED41C84C9F9006E6A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81387ED21C84C9F9006E6A4E /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0283EF922886C982B2554A93 /* Pods_Instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EDDF12DED56DD664C5671F /* Pods-Instagramer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagramer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagramer/Pods-Instagramer.release.xcconfig"; sourceTree = "<group>"; };
+		813193081C8693D8001A200F /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		81387ECB1C84C9F9006E6A4E /* Instagramer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagramer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81387ECE1C84C9F9006E6A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81387ED01C84C9F9006E6A4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				81387EE11C84D104006E6A4E /* LoginViewController.swift */,
+				813193081C8693D8001A200F /* UserProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81387EE21C84D104006E6A4E /* LoginViewController.swift in Sources */,
+				813193091C8693D8001A200F /* UserProfileViewController.swift in Sources */,
 				81387ED11C84C9F9006E6A4E /* ViewController.swift in Sources */,
 				81387ECF1C84C9F9006E6A4E /* AppDelegate.swift in Sources */,
 			);

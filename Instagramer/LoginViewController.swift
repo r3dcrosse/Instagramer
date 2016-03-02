@@ -14,10 +14,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    override func viewWillAppear(animated: Bool) {
+        // Initialize password/username text fields
+        if PFUser.currentUser() == nil {
+            print("User is nil")
+            usernameField.text = ""
+            passwordField.text = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +38,7 @@ class LoginViewController: UIViewController {
     @IBAction func dismiss(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     @IBAction func onSignIn(sender: AnyObject) {
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""

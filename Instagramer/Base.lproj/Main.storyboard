@@ -41,13 +41,6 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDd-AT-YHn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7I-oD-9LG">
-                                <rect key="frame" x="133" y="379" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="dismiss:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eu8-ch-1oW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -111,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="2766" y="617"/>
         </scene>
-        <!--Item 1-->
+        <!--Home Timeline-->
         <scene sceneID="oM4-Re-wA8">
             <objects>
-                <viewController id="3gK-gw-gOA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeTimelineViewController" title="Home Timeline" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gK-gw-gOA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dPE-ZV-VXp"/>
                         <viewControllerLayoutGuide type="bottom" id="aJ1-pQ-evw"/>
@@ -134,7 +127,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nJA-dL-vZH">
             <objects>
-                <tabBarController id="dBx-dJ-qvD" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarControllerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dBx-dJ-qvD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6d8-bq-oPF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5i1-FN-A0N">

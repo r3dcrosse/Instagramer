@@ -13,10 +13,13 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+        
         // Initialize Parse
         // Set applicationId and server based on the values in the Heroku settings.
         // clientKey is not used on Parse open source unless explicitly configured
@@ -28,7 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        let currentUser = PFUser.currentUser()
+        
+        // Check if a user is logged in to persist user session
+        if currentUser != nil {
+            // Go to home view controller
+            print("Current user detected: \(currentUser!.username!)")
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarControllerVC") as UIViewController
+            window?.rootViewController = vc
+        }
+        
         return true
+    }
+    
+    func userDidLogout() {
+        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(application: UIApplication) {

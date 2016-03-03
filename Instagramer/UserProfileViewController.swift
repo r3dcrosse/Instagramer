@@ -9,7 +9,11 @@
 import UIKit
 import Parse
 
+let userDidLogoutNotification = "userDidLogoutNotification"
+
 class UserProfileViewController: UIViewController {
+    
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +27,9 @@ class UserProfileViewController: UIViewController {
     }
     
     @IBAction func onLogOut(sender: AnyObject) {
+        print("Logging out user: \(PFUser.currentUser()!.username!)")
         PFUser.logOut()
-        
-        // Go back to login screen
-        self.dismissViewControllerAnimated(true, completion: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
     }
 
     /*

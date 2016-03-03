@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -176,6 +177,12 @@
                                     <constraint firstItem="R96-ze-2mX" firstAttribute="centerY" secondItem="A5q-uh-paj" secondAttribute="centerY" id="qkM-Sw-1LI"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-nb-3Ik">
+                                <rect key="frame" x="0.0" y="48" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QMS-nb-3Ik" secondAttribute="height" multiplier="1:1" id="Lqc-3q-oEJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -187,6 +194,9 @@
                             <constraint firstAttribute="trailing" secondItem="Rjq-0G-cHJ" secondAttribute="trailing" id="UUB-nn-jD9"/>
                             <constraint firstItem="A5q-uh-paj" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="Wai-BO-7sL"/>
                             <constraint firstItem="A5q-uh-paj" firstAttribute="top" secondItem="qgK-MD-YMQ" secondAttribute="top" id="Y2F-DT-f8a"/>
+                            <constraint firstItem="QMS-nb-3Ik" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="ceL-fR-F6Y"/>
+                            <constraint firstAttribute="trailing" secondItem="QMS-nb-3Ik" secondAttribute="trailing" id="uCj-gZ-EJc"/>
+                            <constraint firstItem="QMS-nb-3Ik" firstAttribute="top" secondItem="PSI-tO-Yb7" secondAttribute="bottom" constant="28" id="wJl-ez-Hkr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -199,6 +209,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cameraOverlay" destination="qgK-MD-YMQ" id="SIS-Em-Imi"/>
+                        <outlet property="imageView" destination="QMS-nb-3Ik" id="m11-CY-7qh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VR-8Z-v0I" userLabel="First Responder" sceneMemberID="firstResponder"/>

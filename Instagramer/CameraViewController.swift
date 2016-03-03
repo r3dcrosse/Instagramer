@@ -12,6 +12,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet var cameraOverlay: UIView!
     
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(animated: Bool) {
         
@@ -36,6 +37,23 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             // Do something with the images (based on your use case)
             //currentImageView.image = editedImage
+            
+            // SEPIA FILTER EXAMPLE:::::::::::::::::::
+            /* http://www.raywenderlich.com/76285/beginning-core-image-swift */
+            let beginImage = CIImage(image: editedImage)
+            let filter = CIFilter(name: "CISepiaTone")
+            filter?.setValue(beginImage, forKey: kCIInputImageKey)
+            filter?.setValue(0.5, forKey: kCIInputIntensityKey)
+            
+            // 1
+            let context = CIContext(options:nil)
+            
+            // 2
+            let cgimg = context.createCGImage((filter?.outputImage)!, fromRect: (filter?.outputImage!.extent)!)
+            
+            // 3
+            let newImage = UIImage(CGImage: cgimg)
+            self.imageView.image = newImage
             
             // Dismiss UIImagePickerController to go back to your original view controller
             dismissViewControllerAnimated(true, completion: nil)

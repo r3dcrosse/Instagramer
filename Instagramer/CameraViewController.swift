@@ -65,6 +65,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func onPostPic(sender: AnyObject) {
+        // Resize image FIRST!!!!!!!
+        
+        Post.postUserImage(self.imageView.image, caption: "Hello World") { (success: Bool, error: NSError?) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     @IBAction func onTakeAPic(sender: AnyObject) {
         let vc = UIImagePickerController()
         vc.delegate = self

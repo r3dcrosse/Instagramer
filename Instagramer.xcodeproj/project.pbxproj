@@ -16,6 +16,7 @@
 		81387EE21C84D104006E6A4E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387EE11C84D104006E6A4E /* LoginViewController.swift */; };
 		817C75801C882049009EA783 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C757F1C882049009EA783 /* CameraViewController.swift */; };
 		817C75841C8839EC009EA783 /* CamPickerSeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C75831C8839EC009EA783 /* CamPickerSeg.swift */; };
+		81AAB3B71C88D18700B080F8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAB3B61C88D18700B080F8 /* Post.swift */; };
 		FB90170B8560FDDA7CE2F7A8 /* Pods_Instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0283EF922886C982B2554A93 /* Pods_Instagramer.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		81387EE11C84D104006E6A4E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		817C757F1C882049009EA783 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		817C75831C8839EC009EA783 /* CamPickerSeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPickerSeg.swift; sourceTree = "<group>"; };
+		81AAB3B61C88D18700B080F8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A5F91F3B9B8759E512192930 /* Pods-Instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagramer/Pods-Instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		81387ECD1C84C9F9006E6A4E /* Instagramer */ = {
 			isa = PBXGroup;
 			children = (
+				81AAB3B51C88D16700B080F8 /* Model */,
 				81387EE01C84D0F3006E6A4E /* View Controllers */,
 				81387ECE1C84C9F9006E6A4E /* AppDelegate.swift */,
 				81387ED01C84C9F9006E6A4E /* ViewController.swift */,
@@ -89,6 +92,14 @@
 				817C75831C8839EC009EA783 /* CamPickerSeg.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		81AAB3B51C88D16700B080F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81AAB3B61C88D18700B080F8 /* Post.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		8B88BC0196D7503F28201986 /* Frameworks */ = {
@@ -236,6 +247,7 @@
 				813193091C8693D8001A200F /* UserProfileViewController.swift in Sources */,
 				81387ED11C84C9F9006E6A4E /* ViewController.swift in Sources */,
 				81387ECF1C84C9F9006E6A4E /* AppDelegate.swift in Sources */,
+				81AAB3B71C88D18700B080F8 /* Post.swift in Sources */,
 				817C75841C8839EC009EA783 /* CamPickerSeg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

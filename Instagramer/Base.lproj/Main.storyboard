@@ -183,10 +183,44 @@
                                     <constraint firstAttribute="width" secondItem="QMS-nb-3Ik" secondAttribute="height" multiplier="1:1" id="Lqc-3q-oEJ"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vj-lj-kfS">
+                                <rect key="frame" x="0.0" y="390" width="320" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56v-sM-Jc0">
+                                        <rect key="frame" x="114" y="22" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nl-qO-YZe">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <connections>
+                                            <action selector="onPostPic:" destination="ahs-Q1-pgX" eventType="touchUpInside" id="puK-bV-OtT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1nl-qO-YZe" firstAttribute="top" secondItem="9vj-lj-kfS" secondAttribute="top" id="02s-RW-fC7"/>
+                                    <constraint firstAttribute="height" constant="65" id="F0M-1j-IvY"/>
+                                    <constraint firstItem="56v-sM-Jc0" firstAttribute="centerX" secondItem="9vj-lj-kfS" secondAttribute="centerX" id="W3y-fG-Tzg"/>
+                                    <constraint firstItem="56v-sM-Jc0" firstAttribute="centerY" secondItem="9vj-lj-kfS" secondAttribute="centerY" id="ayf-o6-aWu"/>
+                                    <constraint firstAttribute="bottom" secondItem="1nl-qO-YZe" secondAttribute="bottom" id="bKk-DJ-C3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="1nl-qO-YZe" secondAttribute="trailing" id="eeG-rM-xkT"/>
+                                    <constraint firstItem="1nl-qO-YZe" firstAttribute="top" secondItem="9vj-lj-kfS" secondAttribute="top" id="hCr-l5-Qov"/>
+                                    <constraint firstItem="1nl-qO-YZe" firstAttribute="leading" secondItem="9vj-lj-kfS" secondAttribute="leading" id="x8l-Kn-aLY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="02s-RW-fC7"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rjq-0G-cHJ" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="1aW-YE-RDG"/>
+                            <constraint firstItem="EJg-pe-AVZ" firstAttribute="top" secondItem="9vj-lj-kfS" secondAttribute="bottom" constant="64" id="35F-V9-EeW"/>
                             <constraint firstItem="EJg-pe-AVZ" firstAttribute="top" secondItem="Rjq-0G-cHJ" secondAttribute="bottom" id="4pS-Fg-jXT"/>
                             <constraint firstAttribute="trailing" secondItem="A5q-uh-paj" secondAttribute="trailing" id="A5W-Xr-nnz"/>
                             <constraint firstItem="Rjq-0G-cHJ" firstAttribute="top" secondItem="qgK-MD-YMQ" secondAttribute="topMargin" constant="454" id="FdU-np-6Bd"/>
@@ -194,6 +228,8 @@
                             <constraint firstAttribute="trailing" secondItem="Rjq-0G-cHJ" secondAttribute="trailing" id="UUB-nn-jD9"/>
                             <constraint firstItem="A5q-uh-paj" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="Wai-BO-7sL"/>
                             <constraint firstItem="A5q-uh-paj" firstAttribute="top" secondItem="qgK-MD-YMQ" secondAttribute="top" id="Y2F-DT-f8a"/>
+                            <constraint firstAttribute="trailing" secondItem="9vj-lj-kfS" secondAttribute="trailing" id="b57-Aa-YiA"/>
+                            <constraint firstItem="9vj-lj-kfS" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="cJO-DJ-Ix9"/>
                             <constraint firstItem="QMS-nb-3Ik" firstAttribute="leading" secondItem="qgK-MD-YMQ" secondAttribute="leading" id="ceL-fR-F6Y"/>
                             <constraint firstAttribute="trailing" secondItem="QMS-nb-3Ik" secondAttribute="trailing" id="uCj-gZ-EJc"/>
                             <constraint firstItem="QMS-nb-3Ik" firstAttribute="top" secondItem="PSI-tO-Yb7" secondAttribute="bottom" constant="28" id="wJl-ez-Hkr"/>

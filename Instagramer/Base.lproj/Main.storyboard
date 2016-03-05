@@ -298,7 +298,7 @@
         <!--Home Timeline-->
         <scene sceneID="oM4-Re-wA8">
             <objects>
-                <viewController storyboardIdentifier="HomeTimelineViewController" title="Home Timeline" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gK-gw-gOA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeTimelineViewController" title="Home Timeline" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gK-gw-gOA" customClass="HomeTimelineViewController" customModule="Instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dPE-ZV-VXp"/>
                         <viewControllerLayoutGuide type="bottom" id="aJ1-pQ-evw"/>
@@ -306,10 +306,59 @@
                     <view key="view" contentMode="scaleToFill" id="Afa-Of-IFZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="428" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Fm-2Z-7Pr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeTimelineCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTimelineCell" rowHeight="428" id="i7J-4h-pMD" customClass="HomeTimelineTableViewCell" customModule="Instagramer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="428"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i7J-4h-pMD" id="caB-Bi-rSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="427"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv3-ke-REg">
+                                                    <rect key="frame" x="0.0" y="29" width="320" height="320"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="This is the caption of a instagramer posttttttttttttttt!!!!!!!!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jau-WG-Nbz">
+                                                    <rect key="frame" x="90" y="352" width="222" height="31"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES" calendarEvent="YES"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqM-at-mqs">
+                                                    <rect key="frame" x="7" y="357" width="80" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.26132610934210526" blue="0.46052631578947362" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-xu-el3">
+                                                    <rect key="frame" x="8" y="1" width="80" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2613261093" blue="0.46052631579999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userCaptionTextView" destination="jau-WG-Nbz" id="O5j-ZD-Wa2"/>
+                                            <outlet property="userCaptionUsername" destination="FqM-at-mqs" id="ZHI-9i-IIu"/>
+                                            <outlet property="userImageView" destination="Zv3-ke-REg" id="hnC-G9-Ixy"/>
+                                            <outlet property="usernameLabel" destination="R4V-xu-el3" id="qF7-2C-QJO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="alM-OH-vBg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="7Fm-2Z-7Pr" id="cJo-TU-vqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVp-pW-dJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

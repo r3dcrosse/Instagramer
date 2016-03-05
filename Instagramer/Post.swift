@@ -9,10 +9,55 @@
 import UIKit
 import Parse
 
+/* CLASS MODEL DESIGNED BY @Monte9 */
+let imageDataSetNotification = "imageDataSet";
+
 class Post: NSObject {
-    /**
-     * Other methods
-     */
+    
+    var username: PFUser?
+    var usernameString: String?
+    var caption: String?
+    var image: UIImage?
+    var numLikes: Int?
+    var numComments: Int?
+    
+    var cell: HomeTimelineTableViewCell?
+    
+    init(object: PFObject) {
+        
+        super.init()
+        
+        // Create Parse object PFObject
+        let newObject = object
+        
+        print("Get details of photo from object")
+        // Add relevant fields to the object
+        username = newObject["author"] as? PFUser
+        caption = newObject["caption"] as? String
+        numLikes = newObject["likesCount"] as? Int
+        numComments = newObject["commentsCount"] as? Int
+        
+        usernameString = username?.username!
+        
+        if let newImage = object.valueForKey("media")! as? PFFile {
+            
+            newImage.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+                if (error == nil) {
+                    print("Image data found.. saving UIImage")
+                    let image = UIImage(data: imageData!)
+                    print(image)
+                    self.image = image
+                    self.cell?.post = self;
+                    NSNotificationCenter.defaultCenter().postNotificationName(imageDataSetNotification, object: nil)
+                } else {
+                    print("ERROR: could not get image \(error?.localizedDescription)")
+                }
+                }, progressBlock: { (int: Int32) -> Void in
+                    print("int yay!")
+            })
+        }
+    }
+
      
      /**
      Method to add a user post to Parse (uploading image file)

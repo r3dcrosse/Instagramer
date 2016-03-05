@@ -17,6 +17,8 @@
 		817C75801C882049009EA783 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C757F1C882049009EA783 /* CameraViewController.swift */; };
 		817C75841C8839EC009EA783 /* CamPickerSeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C75831C8839EC009EA783 /* CamPickerSeg.swift */; };
 		81AAB3B71C88D18700B080F8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAB3B61C88D18700B080F8 /* Post.swift */; };
+		81AAB3B91C8949E400B080F8 /* HomeTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAB3B81C8949E400B080F8 /* HomeTimelineViewController.swift */; };
+		81AAB3BC1C89806100B080F8 /* HomeTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAB3BB1C89806100B080F8 /* HomeTimelineTableViewCell.swift */; };
 		FB90170B8560FDDA7CE2F7A8 /* Pods_Instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0283EF922886C982B2554A93 /* Pods_Instagramer.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		817C757F1C882049009EA783 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		817C75831C8839EC009EA783 /* CamPickerSeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPickerSeg.swift; sourceTree = "<group>"; };
 		81AAB3B61C88D18700B080F8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		81AAB3B81C8949E400B080F8 /* HomeTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimelineViewController.swift; sourceTree = "<group>"; };
+		81AAB3BB1C89806100B080F8 /* HomeTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		A5F91F3B9B8759E512192930 /* Pods-Instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagramer/Pods-Instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +75,7 @@
 		81387ECD1C84C9F9006E6A4E /* Instagramer */ = {
 			isa = PBXGroup;
 			children = (
+				81AAB3BA1C89803400B080F8 /* View */,
 				81AAB3B51C88D16700B080F8 /* Model */,
 				81387EE01C84D0F3006E6A4E /* View Controllers */,
 				81387ECE1C84C9F9006E6A4E /* AppDelegate.swift */,
@@ -90,6 +95,7 @@
 				813193081C8693D8001A200F /* UserProfileViewController.swift */,
 				817C757F1C882049009EA783 /* CameraViewController.swift */,
 				817C75831C8839EC009EA783 /* CamPickerSeg.swift */,
+				81AAB3B81C8949E400B080F8 /* HomeTimelineViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -100,6 +106,14 @@
 				81AAB3B61C88D18700B080F8 /* Post.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		81AAB3BA1C89803400B080F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81AAB3BB1C89806100B080F8 /* HomeTimelineTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		8B88BC0196D7503F28201986 /* Frameworks */ = {
@@ -244,8 +258,10 @@
 			files = (
 				81387EE21C84D104006E6A4E /* LoginViewController.swift in Sources */,
 				817C75801C882049009EA783 /* CameraViewController.swift in Sources */,
+				81AAB3BC1C89806100B080F8 /* HomeTimelineTableViewCell.swift in Sources */,
 				813193091C8693D8001A200F /* UserProfileViewController.swift in Sources */,
 				81387ED11C84C9F9006E6A4E /* ViewController.swift in Sources */,
+				81AAB3B91C8949E400B080F8 /* HomeTimelineViewController.swift in Sources */,
 				81387ECF1C84C9F9006E6A4E /* AppDelegate.swift in Sources */,
 				81AAB3B71C88D18700B080F8 /* Post.swift in Sources */,
 				817C75841C8839EC009EA783 /* CamPickerSeg.swift in Sources */,

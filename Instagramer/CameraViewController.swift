@@ -14,6 +14,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var newImage: UIImage!
+    
     override func viewWillAppear(animated: Bool) {
         
     }
@@ -22,6 +24,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if imageView.image == nil {
+            openCamera()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +57,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             let cgimg = context.createCGImage((filter?.outputImage)!, fromRect: (filter?.outputImage!.extent)!)
             
             // 3
-            let newImage = UIImage(CGImage: cgimg)
+            newImage = UIImage(CGImage: cgimg)
             self.imageView.image = newImage
             
             // Dismiss UIImagePickerController to go back to your original view controller
@@ -65,15 +70,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func onPostPic(sender: AnyObject) {
-        // Resize image FIRST!!!!!!!
-        
-        Post.postUserImage(self.imageView.image, caption: "Hello World") { (success: Bool, error: NSError?) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-    }
     
     @IBAction func onTakeAPic(sender: AnyObject) {
+        openCamera()
+    }
+    
+    func openCamera() {
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
@@ -82,6 +84,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.presentViewController(vc, animated: true, completion: nil)
     }
 
+    @IBAction func onNext(sender: AnyObject) {
+        if imageView.image != nil {
+            performSegueWithIdentifier("captionSeg", sender: self)
+        }
+    }
     
     // MARK: - Navigation
 
@@ -89,6 +96,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "captionSeg" {
+            let captionViewController = segue.destinationViewController as! CaptionViewController
+            captionViewController.theImage = newImage
+        }
         
         
     }

@@ -15,6 +15,11 @@ class HomeTimelineViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     
     var posts: [PFObject]?
+    
+    override func viewWillAppear(animated: Bool) {
+        loadData()
+        tableView.reloadData()
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +28,6 @@ class HomeTimelineViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-        loadData()
         tableView.reloadData()
     }
 
